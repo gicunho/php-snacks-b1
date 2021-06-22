@@ -138,8 +138,25 @@ for ($i=0; $i <count($posts); $i++) {
     <?php   
     }
 }
-?> 
+?>
 
+<h2>Snack 4</h2>
+<!-- Snack 4 -->
+<!-- Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta -->
+<?php 
+$numeri_random = [];
+//var_dump($numero_random);
+for ($i=0; $i < 15; $i++) {
+    $numero_random = rand(1, 100);
+ 
+    if(!in_array($numero_random, $numeri_random)) {
+        $numeri_random[] = $numero_random;
+    } else {
+        $i--;
+    }
+}
+var_dump($numeri_random)
+?>
 
 </body>
 </html>
