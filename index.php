@@ -45,7 +45,29 @@ $giornata = [
             <?php echo $giornata[$i]['squadra_casa_nome']; ?> - <?php echo $giornata[$i]['squadra_ospite_nome']; ?> | <?php echo $giornata[$i]['squadra_casa_punti']; ?> - <?php echo $giornata[$i]['squadra_ospite_punti']; ?>
        </div>
         <?php } ?>
-    
+
+<!-- Snack 2 -->
+<!-- Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) 
+che name sia più lungo di 3 caratteri, 
+che mail contenga un punto e una chiocciola e 
+che age sia un numero. 
+Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
+<form action="" method="get">
+<input type="text" name="name" id="name">
+<input type="number" name="age" id="age">
+<input type="email" name="email" id="email">
+<button type="submit">Submit</button>
+</form>
+<?php var_dump($_GET['age'])?>
+<?php 
+    if(strlen($_GET['name']) > 3 && strpos($_GET['email'], '@') && strpos($_GET['email'], '.') && is_numeric($_GET['age'])) {
+        echo 'Accesso riuscito';
+    } else {
+        echo 'Accesso negato';
+    }
+?>
+
+
 
 </body>
 </html>
