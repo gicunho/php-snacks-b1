@@ -39,7 +39,7 @@ $giornata = [
         'squadra_ospite_punti' => 55,
     ]
     ];
-    var_dump($giornata[0]['squadra_casa_nome']);
+    //var_dump($giornata[0]['squadra_casa_nome']);
     ?>
     <?php for ($i=0; $i <count($giornata); $i++) {?> 
        <div> 
@@ -62,7 +62,6 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 <input type="email" name="email" id="email">
 <button type="submit">Submit</button>
 </form>
-<?php var_dump($_GET['age'])?>
 <?php 
     if(strlen($_GET['name']) > 3 && strpos($_GET['email'], '@') && strpos($_GET['email'], '.') && is_numeric($_GET['age'])) {
         echo 'Accesso riuscito';
@@ -157,6 +156,14 @@ for ($i=0; $i < 15; $i++) {
 }
 var_dump($numeri_random)
 ?>
+
+<h2>Snack 5</h2>
+<!-- Snack 5 -->
+<!-- Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
+<?php 
+$paragrafo = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatum minima corporis dolorem quibusdam nesciunt cum ipsum dolores similique qui quaerat. Fugiat veritatis magni, provident repellendus distinctio, labore id sapiente.'
+?>
+<p><?php echo str_replace('.', '. </p> <p>', $paragrafo) ?></p>  
 
 </body>
 </html>
