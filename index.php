@@ -165,5 +165,49 @@ $paragrafo = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vol
 ?>
 <p><?php echo str_replace('.', '. </p> <p>', $paragrafo) ?></p>  
 
+
+<h2>Snack 6</h2>
+<!-- Snack 6 -->
+<!-- Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde. -->
+<?php
+ 
+    $db = [
+        'teachers' => [
+            [
+                'name' => 'Michele',
+                'lastname' => 'Papagni'
+            ],
+            [
+                'name' => 'Fabio',
+                'lastname' => 'Forghieri'
+            ]
+        ],
+        'pm' => [
+            [
+                'name' => 'Roberto',
+                'lastname' => 'Marazzini'
+            ],
+            [
+                'name' => 'Federico',
+                'lastname' => 'Pellegrini'
+            ]
+        ]
+    ];
+ 
+?>
+
+<div style="background-color: gray; width: 300px; height: 300px;">
+    <?php echo $db['teachers'][0]['name']; ?>
+    <?php echo $db['teachers'][0]['lastname']; ?>
+    <?php echo $db['teachers'][1]['name']; ?>
+    <?php echo $db['teachers'][1]['lastname']; ?>
+</div>
+
+<div style="background-color: green; width: 300px; height: 300px;">
+    <?php echo $db['pm'][0]['name']; ?>
+    <?php echo $db['pm'][0]['lastname']; ?>
+    <?php echo $db['pm'][1]['name']; ?>
+    <?php echo $db['pm'][1]['lastname']; ?>
+</div>
 </body>
 </html>
